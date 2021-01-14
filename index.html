@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Hyfon</title>
+   <script src="Hyfon.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript" charset="utf-8">
+      function start() {
+         document.getElementById('button').remove();
+         var demoCode = `elm-a-'h1'-'Hyfon';style-a-{};add-sys-a`; //hyfon code for the whole page
+         console.log(hyfon_string(demoCode, "document.getElementById('body')"))
+         eval(hyfon_string(demoCode, "document.getElementById('body')"))
+      }
+   </script>
+</head>
+
+<body>
+   <div id="body"></div>
+   <button onclick="start()" id='button'>Click me</button>
+</body>
+
+</html>
