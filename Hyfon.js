@@ -111,3 +111,16 @@ function hyfon_string(a, sysname) {
    var result = j
    return result;
 }
+function hyfon_run_filename(filename, sysname){
+   var r = true
+   var c = new XMLHttpRequest();
+   c.open('GET', `${filename}.hy`);
+   c.onreadystatechange = function(){
+      if(c.responseText !== '' && r == true){
+      console.log(c.responseText)
+      eval(hyfon_string(c.responseText, sysname))
+      r = !r
+      }
+   };
+   c.send();
+}
