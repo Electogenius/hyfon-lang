@@ -8,16 +8,15 @@
    <script type="text/javascript" charset="utf-8">
       function start() {
          document.getElementById('button').remove();
-         var demoCode = `elm-a-'h1'-'Hyfon';style-a-{};add-sys-a`; //hyfon code for the whole page
-         console.log(hyfon_string(demoCode, "document.getElementById('body')"))
-         eval(hyfon_string(demoCode, "document.getElementById('body')"))
+         var demoCode = ``; //hyfon code for the whole page
+         hyfon_run_filename('demo', 'document.getElementById("body")')
       }
    </script>
 </head>
 
 <body>
    <div id="body"></div>
-   <button onclick="start()" id='button'>Click me</button>
+   <button onclick="start()" id='button'>Click me to load website</button>
 </body>
 
 </html>
