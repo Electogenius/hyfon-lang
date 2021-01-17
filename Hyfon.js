@@ -43,6 +43,14 @@ function hyfon_string(a, sysname) {
 					mbt = ''
 				}
 			}
+			if (mbt == 'set') {
+				if (qq==1) {
+					j+=`${k} = `
+				}
+				if (qq==2) {
+					j+=k
+				}
+			}
 			//if this is the first keyword,
 			if (qq == 0) {
 				//switch keyword
@@ -75,6 +83,7 @@ function hyfon_string(a, sysname) {
 						break;
 					case 'set':
 						mbt = 'set'
+						c = ''
 						break;
 					default:
 						break;
@@ -123,6 +132,7 @@ function hyfon_string(a, sysname) {
 	j = j.replace('; ', '\n');
 	j = j.replace(/__/g, "-");
 	j = j.replace(/_n/g, "<br>");
+	j=j.replace(/<>/g, "")
 	var result = j
 	return result;
 }
