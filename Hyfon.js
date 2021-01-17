@@ -44,11 +44,11 @@ function hyfon_string(a, sysname) {
 				}
 			}
 			if (mbt == 'set') {
-				if (qq==1) {
-					j+=`${k} = `
+				if (qq == 1) {
+					j += `${k} = `
 				}
-				if (qq==2) {
-					j+=k
+				if (qq == 2) {
+					j += k
 				}
 			}
 			//if this is the first keyword,
@@ -132,7 +132,7 @@ function hyfon_string(a, sysname) {
 	j = j.replace('; ', '\n');
 	j = j.replace(/__/g, "-");
 	j = j.replace(/_n/g, "<br>");
-	j=j.replace(/<>/g, "")
+	j = j.replace(/<>/g, "")
 	var result = j
 	return result;
 }
