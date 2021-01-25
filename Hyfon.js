@@ -140,7 +140,7 @@ function hyfon_string(a, sysname) {
 function hyfon_run_filename(filename, sysname) {
 	var r = true
 	var c = new XMLHttpRequest();
-	c.open('GET', `${filename}.hy`);
+	c.open('GET', `${filename}`);
 	c.onreadystatechange = function() {
 		if (c.responseText !== '' && r == true) {
 			////(c.responseText)
