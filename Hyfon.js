@@ -1,3 +1,5 @@
+var excmds
+
 function hyfon_string(a, sysname) {
 	var usemes = {}
 	a = a.replace(/sys/gi, sysname)
@@ -138,7 +140,7 @@ function hyfon_string(a, sysname) {
 }
 
 function hyfon_run_filename(filename, sysname) {
-	var r = true
+	var r = true;
 	var c = new XMLHttpRequest();
 	c.open('GET', `${filename}`);
 	c.onreadystatechange = function() {
@@ -147,7 +149,16 @@ function hyfon_run_filename(filename, sysname) {
 			////(hyfon_string(c.responseText, sysname))
 			eval(hyfon_string(c.responseText, sysname))
 			r = !r
-		}
+		};
 	};
 	c.send();
 }
+
+function hyfon_library(lib) {
+   for (var cm in lib) {
+      excmds[cm] = lib[cm]
+   }
+}
+
+
+

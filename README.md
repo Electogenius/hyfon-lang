@@ -10,7 +10,7 @@ Add this to your code:
 And to run the hyfon code in a string, run (in a js script):
 ```JavaScript
 hyfon_string('insert code here!', 'insert where the output will be sent to (what part of the document counts as "sys")');
-//or if you are using an external file (extension: .hy):
+//or if you are using an external file (extension: .-):
 hyfon_run_filename("filename without extension", "where is 'sys'");
 ```
-and btw nothing works rn
+and btw not much works rn

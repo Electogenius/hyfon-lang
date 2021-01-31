@@ -5,6 +5,11 @@
    <title>Hyfon</title>
    <script src="Hyfon.js" type="text/javascript" charset="utf-8"></script>
    <script type="text/javascript" charset="utf-8">
+      hyfon_library({
+         log: {
+            js: ['console.log("oo")']
+         }
+      })
       function start() {
          document.getElementById('button').remove();
          hyfon_run_filename('demo.-', 'document.getElementById("body")')
