@@ -3,7 +3,13 @@ var excmds = {};
 function hyfon_string(a, sysname) {
    var usemes = {}
    a = a.replace(/sys/gi, sysname)
-
+   //official laziness:
+   hyfon_library({
+   	log: {
+   		js: ["j+='console.log('", "j+=k+')'"]
+   	}
+   })
+   
    var aa; //current elm name for hue command
    var j = ''; //js code
    var name; //appname
